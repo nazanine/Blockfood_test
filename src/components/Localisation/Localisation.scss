@@ -1,0 +1,12 @@
+.localisationContainer{
+  width: 50%;
+  height: 250px;
+  background: darkslategray;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+}
