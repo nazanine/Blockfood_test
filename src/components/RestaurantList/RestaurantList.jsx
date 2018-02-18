@@ -1,5 +1,9 @@
 import * as React from 'react'
+import * as style from './RestaurantList.scss'
+import * as _ from 'lodash'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import list from './RestaurantList.json'
 
 @connect(mapStateToProps)
 export class RestaurantList extends React.Component{
@@ -7,13 +11,29 @@ export class RestaurantList extends React.Component{
         super(props)
     }
     render(){
-
         const { cityName } = this.props
-
         return (
-        <div>
+        <div className={style.restaurantListContainer}>
             <h1>Welcome to {cityName}</h1>
-            <h2>Hergit e is All Restaurants in {cityName}</h2>
+            <h2>Here is All Restaurants in {cityName}</h2>
+
+            <div className={style.restaurantList}>
+                <ul className={style.restaurants}>
+                    {_.map(list, restaurants => {
+                        return _.map(restaurants, restaurant => {
+                            return (
+                                <li className={style.restaurant}>
+                                <div>
+                                    <Link to={`/restaurants/${cityName}/${restaurant.id}`}>
+                                        <img className={style.restaurantImage} src={restaurant.image} />
+                                        <div className={style.restaurantName}><h2>{restaurant.name}</h2></div>
+                                    </Link>
+                                </div>
+                            </li>)
+                        })
+                    })}
+                </ul>
+            </div>
         </div>
         )
     }

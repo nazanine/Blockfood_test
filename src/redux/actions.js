@@ -1,1 +1,3 @@
 export const SET_CITY_NAME = 'SET_CITY_NAME'
+export const SET_TOTAL_SHOPPING_LIST = 'SET_TOTAL_SHOPPING_LIST'
+export const ADD_TO_LIST = 'ADD_TO_LIST'

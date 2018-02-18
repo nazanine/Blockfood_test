@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router';
 import styles from './App.scss';
 import { RestaurantList } from '../RestaurantList/RestaurantList.jsx'
 import { Localisation } from '../Localisation/Localisation.jsx'
+import { Restaurant } from '../Restaurant/Restaurant.jsx'
 
 export class App extends React.Component{
     render(){
@@ -14,10 +15,19 @@ export class App extends React.Component{
                     <Route exact path='/' render={() => (
                         <Redirect to='/localisation'/>
                     )}/>
-                    <Route exact path='/localisation' component={() => <Localisation/>} />
-                    <Route exact path='/restaurantList' component={() => <RestaurantList/>} />
+                    <Route exact path='/localisation' render={() => <Localisation />} />
+                    <Route exact path='/restaurantList/:restaurantId' render={(props) => (
+                        <RestaurantList restaurantId={props.match.params.restaurantId} />
+                    )} />
+                    <Route path='/restaurants/:cityId/:restaurantId' render={(props) => (
+                        <Restaurant
+                            cityId={props.match.params.cityId}
+                            restaurantId={props.match.params.restaurantId} />
+                    )} />
                 </div>
             </div>
         )
     }
 }
+
+

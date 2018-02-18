@@ -1,7 +1,7 @@
-var webpack = require('webpack');
-var path = require('path');
-var sourcePath = path.join(__dirname, './src');
-var outPath = path.join(__dirname, './build');
+const webpack = require('webpack');
+const path = require('path');
+const sourcePath = path.join(__dirname, './src');
+const outPath = path.join(__dirname, './build');
 
 
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
             },
             { test: /\.png$/, use: 'url-loader?limit=1250000' },
             { test: /\.(jpg|svg)$/, use: 'url-loader?limit=1250000' },
-            { test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/, use: 'url-loader?limit=100000' }
+            { test: /\.(ttf|eot|woff(2)?)(\?[a-z0-9=&.]+)?$/, use: 'url-loader?limit=100000' },
         ]
     }
 }

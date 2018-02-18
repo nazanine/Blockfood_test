@@ -1,5 +1,28 @@
+@import '../node_modules/reset-css/reset.css';
+
 body{
     margin: 0 auto;
-    background: #bdbdbd;
     text-align: center;
+    font-size: 1rem;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+h1{
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+p{
+    margin-top: 10px;
+    font-size: 1vh;
+    letter-spacing: 1px
+}
+
+@media screen and (min-width: 1200px) {
+    h1{
+        font-size: 3vw;
+    }
 }

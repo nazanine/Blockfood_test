@@ -1,0 +1,69 @@
+.restaurantContainer{
+
+}
+.header{
+  width: 100%;
+  height: 400px;
+  top:0;
+  Left:0;
+  position: relative;
+}
+.restaurantMainImage{
+  width: 100%;
+  height: inherit;
+}
+.welcomeText{
+  background: white;
+  width: 50%;
+  padding: 2vw;
+  bottom: 10%;
+  position: absolute;
+  left: 10%;
+}
+.foodCategories{
+
+}
+.foodList{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.foods{
+  display: flex;
+  width: 40%;
+  height: 100px;
+  flex: 1 auto;
+  margin: 5px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  color: #595959;
+  border-radius: 5px;
+  position: relative;
+  flex-flow: column;
+  max-width: 300px;
+  min-width: 200px;
+}
+.addToBasketButton{
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  color: #595959;
+  border-radius: 5px;
+  max-width: 250px;
+  cursor: pointer;
+  display: flex;
+}
+.foodPart{
+  margin: 26px;
+}
+.foodPart a{
+  text-transform: uppercase;
+  color: #595959;
+
+}
