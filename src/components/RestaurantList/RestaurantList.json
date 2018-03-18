@@ -1,51 +1,44 @@
 {
   "grenoble" : [
     {
-      "id": "Toto_co",
-      "name": "Toto & co",
+      "id": "Cumin_Chantilly",
+      "name": "Cumin & Chantilly",
       "category": "fast food",
       "preparationTime": "10-20 min",
       "menu": [
       {
         "id": "box1",
         "name": "box 1",
-        "price": 30,
-        "category": "food"
-      },
-      {
-        "id": "box2",
-        "name": "box 2",
-        "price": 40,
-        "category": "food"
-      },
-      {
-        "id": "box3",
-        "name": "box 3",
-        "price": 50,
+        "price_bfc": 30,
+        "price_euro": 15,
         "category": "food"
       },
       {
         "id": "coca",
         "name": "Coca-Cola",
-        "price": 10,
+        "price_bfc": 10,
+        "price_euro": 5,
         "category": "drink"
       },
       {
         "id": "sparkling_water",
         "name": "Sparkling water",
-        "price": 10,
+        "price_bfc": 10,
+        "price_euro": 5,
         "category": "drink"
       },
       {
         "id": "cookie",
         "name": "cookie",
-        "price": 5,
+        "price_bfc": 5,
+        "price_euro":2,
         "category": "dessert"
       },
       {
         "id": "ice_cream",
         "name": "ice cream",
-        "price": 10,
+        "price_bfc": 10,
+        "price_euro": 5,
         "category": "dessert"
       }
     ],
@@ -59,31 +52,29 @@
         {
           "name": "pizza Napolitain",
           "id": "pizza_Napolitain",
-          "price": 30,
+          "price_bfc": 30,
+          "price_euro": 15,
           "category": "food"
         },
         {
           "name": "pizza_Vegie",
           "id": "pizza Vegie",
-          "price": 40,
-          "category": "food"
-        },
-        {
-          "name": "pizza toto",
-          "id": "pizza_toto",
-          "price": 50,
+          "price_bfc": 40,
+          "price_euro": 20,
           "category": "food"
         },
         {
           "name": "Coca-Cola",
           "id": "Coca_Cola",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "drink"
         },
         {
           "name": "Sparkling water",
           "id": "Sparkling_water",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "drink"
         }
       ],
@@ -97,36 +88,42 @@
         {
           "name": "Basilic 1",
           "id": "Basilic_1",
-          "price": 30,
+          "price_bfc": 30,
+          "price_euro": 15,
           "category": "food"
         },
         {
           "name": "Basilic 2",
           "id": "Basilic_2",
-          "price": 40,
+          "price_bfc": 40,
+          "price_euro": 20,
           "category": "food"
         },
         {
           "name": "Basilic 3",
           "id": "Basilic_3",
-          "price": 50,
+          "price_bfc": 50,
+          "price_euro": 25,
           "category": "food"
         },
         {
           "name": "Coca-Cola",
           "id": "Coca_Cola",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "drink"
         },
         {
           "name": "Sparkling water",
           "id": "Sparkling_water",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "drink"
         }, {
           "name": "cookie",
           "id": "cookie",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "dessert"
         }
       ],
@@ -140,43 +137,43 @@
         {
           "id": "California_dream",
           "name": "California dream",
-          "price": 30,
+          "price_bfc": 30,
+          "price_euro": 15,
           "category": "food"
         },
         {
           "id": "super_salmon",
           "name": "super Salmon",
-          "price": 40,
+          "price_bfc": 40,
+          "price_euro": 20,
           "category": "food"
         },
         {
           "name": "Salmon lovers",
           "id": "Salmon_lovers",
-          "price": 50,
+          "price_bfc": 50,
+          "price_euro": 25,
           "category": "food"
         },
         {
           "name": "Seven-Up",
           "id": "Seven_Up",
-          "price": 10,
-          "category": "drink"
-        },
-        {
-          "name": "Sparkling water",
-          "id": "Sparkling_water",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "drink"
         },
         {
           "name": "cookie",
           "id": "cookie",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "dessert"
         },
         {
           "name": "ice cream",
           "id": "ice_cream",
-          "price": 10,
+          "price_bfc": 10,
+          "price_euro": 5,
           "category": "dessert"
         }
       ],

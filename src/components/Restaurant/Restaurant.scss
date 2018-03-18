@@ -11,6 +11,7 @@
 .restaurantMainImage{
   width: 100%;
   height: inherit;
+  object-fit: cover;
 }
 .welcomeText{
   background: white;
@@ -19,6 +20,8 @@
   bottom: 10%;
   position: absolute;
   left: 10%;
+  border-radius: 5px;
+  box-shadow: 0 0 25px 0 rgba(243, 238, 238, 0.4);
 }
 .foodCategories{
 
@@ -34,8 +37,8 @@
   width: 40%;
   height: 100px;
   flex: 1 auto;
-  margin: 5px;
-  padding: 5px;
+  margin: 15px;
+  padding: 5px 5px 15px 5px ;
   justify-content: center;
   align-items: center;
   border: 1px solid #bdbdbd;
@@ -58,12 +61,27 @@
   max-width: 250px;
   cursor: pointer;
   display: flex;
+  background: lightgreen;
 }
 .foodPart{
-  margin: 26px;
+  margin: 50px;
 }
 .foodPart a{
   text-transform: uppercase;
   color: #595959;
-
+  line-height: 2em;
+}
+.closeButton{
+  position: absolute;
+  top:0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 5px;
 }

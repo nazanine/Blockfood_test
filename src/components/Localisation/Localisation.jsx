@@ -2,7 +2,6 @@ import * as React from 'react'
 import {bindActionCreators} from 'redux'
 import styles from './Localisation.scss'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
 import * as LocationActions from '../../redux/Localisation/locationActions';
 
@@ -24,14 +23,19 @@ export class Localisation extends React.Component{
 
         return<div className={styles.localisationContainer}>
         <div className={styles.localisation}>
-            <h1>Vos restaurants préférés, livrés en moins de 30 minutes.</h1>
+            <h1>Discover restaurants that deliver near you</h1>
             <div className={styles.search}>
                 <input className={styles.input} value={cityName} type='text'
-                       onKeyDown={this.handleKeyDown}
                        onChange={this.handleAction}
-                       placeholder='loading...'
+                       placeholder='Enter your delivery address'
                 />
-                <Link to={`/restaurantList/${savedCityName}`} ><button className={styles.searchButton}></button></Link>
+                <Link to={`/restaurantList/${savedCityName}`} >
+                    <button className={styles.searchButton}>
+                        <div>
+                            <i className={`fas fa-utensils ${styles.foodIcon}`}></i>
+                        </div>
+                    </button>
+                </Link>
             </div>
         </div>
         </div>
@@ -40,12 +44,6 @@ export class Localisation extends React.Component{
         const { locationActions} = this.props
         locationActions.setCityName(event.target.value)
         this.setState({savedCityName: event.target.value})
-    }
-    handleKeyDown = (event) => {
-        if(event.keyCode === 13 ){
-            this.handleAction(event)
-            return <Redirect push to={`/restaurantList/${event.target.value}`} />
-        }
     }
 }
 function mapStateToProps(state){

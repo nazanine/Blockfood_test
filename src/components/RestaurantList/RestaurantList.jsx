@@ -11,11 +11,12 @@ export class RestaurantList extends React.Component{
         super(props)
     }
     render(){
-        const { cityName } = this.props
+        const { restaurantId } = this.props
+
         return (
         <div className={style.restaurantListContainer}>
-            <h1>Welcome to {cityName}</h1>
-            <h2>Here is All Restaurants in {cityName}</h2>
+            <h1>Welcome to {restaurantId}</h1>
+            <h2>Here is All Restaurants in {restaurantId}</h2>
 
             <div className={style.restaurantList}>
                 <ul className={style.restaurants}>
@@ -24,7 +25,7 @@ export class RestaurantList extends React.Component{
                             return (
                                 <li className={style.restaurant}>
                                 <div>
-                                    <Link to={`/restaurants/${cityName}/${restaurant.id}`}>
+                                    <Link to={`/restaurants/${restaurantId}/${restaurant.id}`}>
                                         <img className={style.restaurantImage} src={restaurant.image} />
                                         <div className={style.restaurantName}><h2>{restaurant.name}</h2></div>
                                     </Link>
