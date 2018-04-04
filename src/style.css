@@ -5,6 +5,7 @@ body{
     text-align: center;
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
+    color: #595959;
 }
 .icon {
     display: inline-block;
@@ -18,7 +19,7 @@ h1{
     font-style: normal;
     font-weight: 700;
     line-height: 1.5em;
-    font-size: 2.5vw;
+    font-size: 20px;
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -29,9 +30,11 @@ p{
     font-size: 1vh;
     letter-spacing: 1px
 }
-
+a{
+    text-decoration: none;
+}
 @media screen and (min-width: 1200px) {
     h1{
-        font-size: 3vw;
+        font-size: 30px;
     }
 }

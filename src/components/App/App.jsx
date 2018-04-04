@@ -4,12 +4,15 @@ import styles from './App.scss';
 import { RestaurantList } from '../RestaurantList/RestaurantList.jsx'
 import { Localisation } from '../Localisation/Localisation.jsx'
 import { Restaurant } from '../Restaurant/Restaurant.jsx'
+import Header from '../Header/Header.jsx'
+import { Progress } from '../Progress/Progress.jsx'
 
-export class App extends React.Component{
+export class App extends React.Component {
     render(){
         return (
             <div className={styles.container}>
                 <div>
+                    <Header/>
                 </div>
                 <div>
                     <Route exact path='/' render={() => (
@@ -24,6 +27,7 @@ export class App extends React.Component{
                             cityId={props.match.params.cityId}
                             restaurantId={props.match.params.restaurantId} />
                     )} />
+                    <Route path='/progress' render={() => <Progress/> } />
                 </div>
             </div>
         )

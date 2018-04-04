@@ -1,0 +1,49 @@
+.progressContainer{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: calc(100% - 70px);
+}
+.progress{
+  margin-top: 30px;
+}
+.mainTitle{
+  font-size: 22px;
+}
+.progressBar{
+  width: 80%;
+  background: #cccccc;
+  display: flex;
+  flex-flow: row;
+  height: 2px;
+  margin: 20px auto;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.progressBar > div{
+  position: relative;
+}
+.progressBar div.round{
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cccccc;
+}
+.progressBar div.colored{
+  background: #00D9C1;
+}
+.progressBar div.colored span{
+  color: #00D9C1;
+}
+
+.progressDescription{
+
+}
+.progressText{
+  position: absolute;
+  top: 25px;
+  left: -100%;
+}

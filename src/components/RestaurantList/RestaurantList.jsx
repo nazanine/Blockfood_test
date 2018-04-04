@@ -4,7 +4,9 @@ import * as _ from 'lodash'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import list from './RestaurantList.json'
+import { RestaurantType } from '../RestaurantType/RestaurantType.jsx'
 
+const totalRestaurantStart = 5
 @connect(mapStateToProps)
 export class RestaurantList extends React.Component{
     constructor(props){
@@ -15,25 +17,36 @@ export class RestaurantList extends React.Component{
 
         return (
         <div className={style.restaurantListContainer}>
-            <h1>Welcome to {restaurantId}</h1>
-            <h2>Here is All Restaurants in {restaurantId}</h2>
+
+            <RestaurantType />
+            <h2>{list.grenoble.length} restaurants in <span className={style.cityTitle}>{restaurantId}</span></h2>
 
             <div className={style.restaurantList}>
-                <ul className={style.restaurants}>
+                <div className={style.restaurants}>
                     {_.map(list, restaurants => {
                         return _.map(restaurants, restaurant => {
                             return (
-                                <li className={style.restaurant}>
-                                <div>
+                                <div className={style.restaurant}>
                                     <Link to={`/restaurants/${restaurantId}/${restaurant.id}`}>
                                         <img className={style.restaurantImage} src={restaurant.image} />
-                                        <div className={style.restaurantName}><h2>{restaurant.name}</h2></div>
+                                        <div className={style.restaurantDetail}>
+                                            <div className={style.restaurantName}>
+                                                <h2>{restaurant.name}</h2>
+                                            </div>
+                                            <div className={style.restaurantDescription}>
+                                                <h2>{restaurant.category}</h2>
+                                            </div>
+                                            <div className={style.restaurantRate}>
+                                                {_.times(restaurant.star, () => <i className={`${style.colored} fas fa-star`}></i>)}
+                                                {_.times((totalRestaurantStart - restaurant.star), () => <i className={`${style.white} fas fa-star`}></i>)}
+                                            </div>
+
+                                        </div>
                                     </Link>
-                                </div>
-                            </li>)
+                            </div>)
                         })
                     })}
-                </ul>
+                </div>
             </div>
         </div>
         )

@@ -5,8 +5,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import * as LocationActions from '../../redux/Localisation/locationActions';
 
-
-
 @connect(mapStateToProps, mapDispatchToProps)
 export class Localisation extends React.Component{
 
@@ -23,7 +21,7 @@ export class Localisation extends React.Component{
 
         return<div className={styles.localisationContainer}>
         <div className={styles.localisation}>
-            <h1>Discover restaurants that deliver near you</h1>
+            <h1>Deliver my food</h1>
             <div className={styles.search}>
                 <input className={styles.input} value={cityName} type='text'
                        onChange={this.handleAction}
@@ -31,9 +29,7 @@ export class Localisation extends React.Component{
                 />
                 <Link to={`/restaurantList/${savedCityName}`} >
                     <button className={styles.searchButton}>
-                        <div>
-                            <i className={`fas fa-utensils ${styles.foodIcon}`}></i>
-                        </div>
+                        I am hungry!
                     </button>
                 </Link>
             </div>

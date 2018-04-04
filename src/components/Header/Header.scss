@@ -1,0 +1,89 @@
+
+.headerContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 0 10px 0 rgba(15, 208, 190, 0.41);
+  border-bottom: 1px solid #80808038;
+}
+
+  .leftHeader{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 45px;
+  }
+  .rightHeader{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 45px;
+    color: #ccc;
+  }
+  .logo{
+    color: rgb(15, 208, 190);
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .logo span{
+    font-weight: bold;
+  }
+  .connection{
+    border: 1px solid #ccc;
+    width: 100px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 15px;
+    padding: 7px 2px;
+    color: #959595;
+  }
+  .connection:active{
+    outline: none;
+  }
+  .connection:focus{
+    outline: none;
+  }
+
+.language {
+  border: 1px solid #ccc;
+  width: 50px;
+  overflow: hidden;
+  position: relative;
+  color: #959595;
+  padding: 7px 2px;
+}
+
+.language select {
+  color: #959595;
+  padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.language:after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 50%;
+  line-height: 25px;
+  background: none;
+  pointer-events: none;
+  padding: 7px ;
+}
+.language select:focus {
+  outline: none;
+}
+.no-pointer-events .language:after {
+  content: none;
+}
+
+
+
